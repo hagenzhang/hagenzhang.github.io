@@ -12,12 +12,13 @@ body {
 
 header {
     width: 100%;
-    height: 11vh;
+    height: 12vh;
     background: black;
     position: fixed;
     z-index: 1;
     text-align: center;
     min-height: 1;
+    border-bottom: 0.05em solid white;
 }
 
 .navigation_bar {
@@ -27,7 +28,7 @@ header {
 nav {
     text-align: center;
     float: left;
-    line-height: 11vh;
+    line-height: 12.5vh;
     font-size: 1vw;
 }
 
@@ -42,12 +43,13 @@ nav a {
 }
 
 nav a:hover {
-    color: gray;
+    color: #EAEAE6;
 }
 
 .banner {
     background-size: cover;
     background-position: center center;
+    background-color: black;
     height: 100vh;
     width: 100vw;
     position: fixed;
