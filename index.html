@@ -57,9 +57,25 @@
             In the background, make a collage of various images that I want to put together.
             This banner will be a fixed banner.
         -->
-        <section class="banner">
-            <img src="/resources/img/silver_sky_banner.png" alt="banner" width="1600" height="800">
+        <script type="text/javascript">
+            ImageArray = new Array();
+            ImageArray[0] = '/resources/img/home_page_images/banner1.png';
+            ImageArray[1] = '/resources/img/home_page_images/banner2.png';
+            ImageArray[2] = '/resources/img/home_page_images/banner3.png';
+            ImageArray[3] = '/resources/img/home_page_images/banner4.png';
+        
+            function getRandomImage() {
+                var num = Math.floor(Math.random() * 4);
+                var img = ImageArray[num];
+                document.getElementById("banner_img").innerHTML = ('<img src="' + img + '" alt="banner image" width="1600" height="800">');
+            }
 
+            document.addEventListener("DOMContentLoaded", getRandomImage);
+        </script>
+        
+        <section class="banner">
+            <div class="banner_img" id="banner_img"></div>
+            <!-- Banner size must be 1800x1000, plus account for header space -->
             <div class="header_text">
                 <h1>Welcome To My Website!</h1>
                 <p>This project is still very much ongoing and the site is still in development :&#41;</p>
@@ -93,7 +109,7 @@
                 I took piano lessons and studied classical music for a few years in elementary school, but then decided to drop 
                 it in favor of learning how to play the drum kit. I had an amazing drum teacher who taught me for 5 years and 
                 helped me find meaning and genuine enjoyment in music making, rather than just playing the notes on a sheet of 
-                paper!
+                paper.
                 <br><br>
                 I played drums for various church worship teams until my third year of highschool, when I decided to also pick 
                 up the guitar since there was a lack of guitarists at my home church. I eventually fell in love with the instrument, 
@@ -110,10 +126,6 @@
                 I'm also on social media!<br>
                 Instagram: <a href="https://www.instagram.com/hagen_zhang/" target="_blank">hagen_zhang</a><br>
                 Snapchat: <a href="https://www.snapchat.com/add/hagen.zhang" target="_blank">hagen.zhang</a>
-                
-
-
-
 
                 </p>
             </div>
@@ -122,10 +134,6 @@
                 <h3>Photos will go here!</h3>
             </section>
         </section>
-
-
-
-
 
         <!--Footer Section: 
             Probably want to include contact information, maybe a link to a page to send
